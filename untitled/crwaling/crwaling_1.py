@@ -13,7 +13,6 @@ from bs4 import BeautifulSoup
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
 def all_league_urls(base_url):
     try:
         res = requests.get(base_url)
@@ -90,7 +89,8 @@ def game(all_league_urls):
                             temp_1 = {
                                 'rank' : rank,
                                 'team' : team,
-                                'season' : group
+                                'season' : group,
+                                'group' : ''
                             }
                             temps_1.append(temp_1)
                     elif group[0] != '2':
